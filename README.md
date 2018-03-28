@@ -4,7 +4,7 @@
 
 ### 安装
 通过这个命令直接安装：
-> pod 'NetWorkEngine'
+> pod 'HGNetWorkEngine'
 
 安装之后，目录是这样的：
 ![image.png](http://upload-images.jianshu.io/upload_images/1198135-e33783e7a3da2ddd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
