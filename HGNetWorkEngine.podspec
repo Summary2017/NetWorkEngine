@@ -139,7 +139,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
 
-    #ss.dependency 'NetWorkEngine/Category'
+    ss.dependency 'HGNetWorkEngine/Category'
 
     ss.source_files = 'HGNetWorkEngine/Core/*.{h,m}'
     ss.public_header_files = 'HGNetWorkEngine/Core/*.h'
