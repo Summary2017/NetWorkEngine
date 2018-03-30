@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HGNetWorkEngine"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "HGNetWorkEngine."
 
   # This description is used to generate tags and improve search results.
@@ -139,7 +139,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
 
-    ss.dependency 'NetWorkEngine/Category'
+    #ss.dependency 'NetWorkEngine/Category'
 
     ss.source_files = 'HGNetWorkEngine/Core/*.{h,m}'
     ss.public_header_files = 'HGNetWorkEngine/Core/*.h'

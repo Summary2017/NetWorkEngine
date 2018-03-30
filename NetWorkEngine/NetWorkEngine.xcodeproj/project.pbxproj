@@ -16,7 +16,7 @@
 		5142B9F51FF4C4B300D904CB /* NSString+Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B9ED1FF4C4B300D904CB /* NSString+Secure.m */; };
 		5142B9F61FF4C4B300D904CB /* NSString+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B9EF1FF4C4B300D904CB /* NSString+UserDefaults.m */; };
 		5142B9F71FF4C4B300D904CB /* HGNetWorkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B9F21FF4C4B300D904CB /* HGNetWorkEngine.m */; };
-		5142B9F81FF4C4B300D904CB /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B9F41FF4C4B300D904CB /* HttpManager.m */; };
+		5142B9F81FF4C4B300D904CB /* HGHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142B9F41FF4C4B300D904CB /* HGHttpManager.m */; };
 		B9D67D9997E0001F8F0B051D /* libPods-NetWorkEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 529BFFB922D7BA82883078E2 /* libPods-NetWorkEngine.a */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +38,8 @@
 		5142B9EF1FF4C4B300D904CB /* NSString+UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UserDefaults.m"; sourceTree = "<group>"; };
 		5142B9F11FF4C4B300D904CB /* HGNetWorkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGNetWorkEngine.h; sourceTree = "<group>"; };
 		5142B9F21FF4C4B300D904CB /* HGNetWorkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGNetWorkEngine.m; sourceTree = "<group>"; };
-		5142B9F31FF4C4B300D904CB /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
-		5142B9F41FF4C4B300D904CB /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
+		5142B9F31FF4C4B300D904CB /* HGHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHttpManager.h; sourceTree = "<group>"; };
+		5142B9F41FF4C4B300D904CB /* HGHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHttpManager.m; sourceTree = "<group>"; };
 		529BFFB922D7BA82883078E2 /* libPods-NetWorkEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetWorkEngine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72B21BADC158DCF3F4A928A /* Pods-NetWorkEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorkEngine.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetWorkEngine/Pods-NetWorkEngine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,8 +125,8 @@
 			children = (
 				5142B9F11FF4C4B300D904CB /* HGNetWorkEngine.h */,
 				5142B9F21FF4C4B300D904CB /* HGNetWorkEngine.m */,
-				5142B9F31FF4C4B300D904CB /* HttpManager.h */,
-				5142B9F41FF4C4B300D904CB /* HttpManager.m */,
+				5142B9F31FF4C4B300D904CB /* HGHttpManager.h */,
+				5142B9F41FF4C4B300D904CB /* HGHttpManager.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -246,13 +246,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetWorkEngine-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -265,7 +268,7 @@
 				5142B9D91FF4C40200D904CB /* ViewController.m in Sources */,
 				5142B9E41FF4C40200D904CB /* main.m in Sources */,
 				5142B9F51FF4C4B300D904CB /* NSString+Secure.m in Sources */,
-				5142B9F81FF4C4B300D904CB /* HttpManager.m in Sources */,
+				5142B9F81FF4C4B300D904CB /* HGHttpManager.m in Sources */,
 				5142B9F61FF4C4B300D904CB /* NSString+UserDefaults.m in Sources */,
 				5142B9D61FF4C40200D904CB /* AppDelegate.m in Sources */,
 				5142B9F71FF4C4B300D904CB /* HGNetWorkEngine.m in Sources */,
